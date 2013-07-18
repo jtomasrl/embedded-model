@@ -11,6 +11,21 @@
     </div>
   <% end %>
 
+  <%= f.fields_for :accounts do |account| %>
+    <div class="field">
+      <%= account.label :username %>
+      <%= account.text_field :username %>
+    </div>
+    <div class="field">
+      <%= account.label :password %>
+      <%= account.password_field :password %>
+    </div>
+    <div class="field">
+      <%= account.label :password_confirmation %>
+      <%= account.password_field :password_confirmation %>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

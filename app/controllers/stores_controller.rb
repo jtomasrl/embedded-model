@@ -13,6 +13,7 @@ class StoresController < ApplicationController
   # GET /stores/new
   def new
     @store = Store.new
+    @store.accounts.build
   end
 
   # GET /stores/1/edit
